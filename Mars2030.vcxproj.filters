@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="sdr">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="libs\imago">
+      <UniqueIdentifier>{0845b822-96bf-471a-af87-061a2eeb7b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libjpeg">
+      <UniqueIdentifier>{d50b874b-779e-4156-a429-ede9c440dfe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libpng">
+      <UniqueIdentifier>{02a83717-2e59-41f3-8e5f-0f4d866257e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\vmath">
+      <UniqueIdentifier>{a8fe7f23-1cf9-46fe-b5ec-a4e5bab14940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\ncf">
+      <UniqueIdentifier>{ba54a5b6-1683-4008-8084-d7e81c199c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\ogg">
+      <UniqueIdentifier>{67844a99-e433-4503-af3f-4d496aadd912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\vorbis">
+      <UniqueIdentifier>{ab46bf64-58ec-4560-ad59-b96c82f5441b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\zlib">
+      <UniqueIdentifier>{89a96376-44d4-44bd-bdf0-49b3af3e1ce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{0e6ebb43-a16d-474e-bbe4-506f51a54119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\audio">
+      <UniqueIdentifier>{a2b4ed5e-4217-4a41-8446-59de1a654871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libdrawtext">
+      <UniqueIdentifier>{c3600527-49fd-4e1b-96b5-2b4ea6fab073}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libs\imago\conv.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\file_jpeg.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\file_png.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\file_ppm.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\file_rgbe.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\ftype_module.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\imago_gl.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\imago2.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imago\modules.c">
+      <Filter>libs\imago</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcapimin.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcapistd.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jccoefct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jccolor.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcdctmgr.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jchuff.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcinit.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcmainct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcmarker.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcmaster.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcomapi.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcparam.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcphuff.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcprepct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jcsample.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jctrans.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdapimin.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdapistd.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdatadst.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdatasrc.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdcoefct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdcolor.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jddctmgr.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdhuff.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdinput.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdmainct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdmarker.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdmaster.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdmerge.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdphuff.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdpostct.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdsample.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jdtrans.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jerror.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jfdctflt.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jfdctfst.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jfdctint.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jidctflt.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jidctfst.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jidctint.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jidctred.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jmemmgr.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jmemnobs.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jquant1.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jquant2.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libjpeg\jutils.c">
+      <Filter>libs\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\png.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngerror.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pnggccrd.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngget.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngmem.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngpread.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngread.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngrio.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngrtran.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngrutil.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngset.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngtrans.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngvcrd.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngwio.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngwrite.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngwtran.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libpng\pngwutil.c">
+      <Filter>libs\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\analysis.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\bitrate.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\block.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\codebook.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\envelope.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\floor0.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\floor1.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\info.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\lookup.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\lpc.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\lsp.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\mapping0.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\mdct.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\psy.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\registry.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\res0.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\sharedbook.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\smallft.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\synthesis.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\vorbisenc.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\vorbisfile.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vorbis\window.c">
+      <Filter>libs\vorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\ncf\dllmain.c">
+      <Filter>libs\ncf</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\ncf\ncf.cc">
+      <Filter>libs\ncf</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\ncf\util.cc">
+      <Filter>libs\ncf</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\ogg\bitwise.c">
+      <Filter>libs\ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\ogg\framing.c">
+      <Filter>libs\ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\adler32.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\compress.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\crc32.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\deflate.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\gzio.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\infback.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\inffast.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\inflate.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\inftrees.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\trees.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\uncompr.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\zlib\zutil.c">
+      <Filter>libs\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\basis.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\basis_c.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\geom.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\matrix.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\matrix_c.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\quat.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\quat_c.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\ray.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\ray_c.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\sphvec.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\vector.cc">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\vmath\vmath.c">
+      <Filter>libs\vmath</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\animation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cfg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datapath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event_handler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\light.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\material.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nuc_emitter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nuc_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nuc_particle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nuc_physics.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nuc_renderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opengl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\point_spirte_ortho_renderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\point_sprite_renderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\screen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\screen_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdrman.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unistate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xform_node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy_template.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entity.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\collision_entity.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sphere.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game_screen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy_generator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wave.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render_target.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\projectile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\audio.cc">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\ovstream.cc">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\stream.cc">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\sample.cc">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\source.cc">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wave_group.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wave_group_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\holomap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libdrawtext\drawgl.c">
+      <Filter>libs\libdrawtext</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libdrawtext\font.c">
+      <Filter>libs\libdrawtext</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\libdrawtext\utf8.c">
+      <Filter>libs\libdrawtext</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bitmap_text.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\weapon_system.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\starting_screen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game_over_screen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\credits_screen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ovr_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libs\imago\ftype_module.h">
+      <Filter>libs\imago</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imago\imago2.h">
+      <Filter>libs\imago</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\cderror.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jchuff.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jconfig.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jdct.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jdhuff.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jerror.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jinclude.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jmemsys.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jmorecfg.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jpegint.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jpeglib.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libjpeg\jversion.h">
+      <Filter>libs\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libpng\png.h">
+      <Filter>libs\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libpng\pngconf.h">
+      <Filter>libs\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\backends.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\bitrate.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\codebook.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\codec.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\codec_internal.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\envelope.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\highlevel.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\lookup.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\lookup_data.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\lpc.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\lsp.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\masking.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\mdct.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\misc.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\os.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\psy.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\registry.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\scales.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\smallft.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\vorbisenc.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\vorbisfile.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vorbis\window.h">
+      <Filter>libs\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\ncf\declspec.h">
+      <Filter>libs\ncf</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\ncf\ncf.h">
+      <Filter>libs\ncf</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\ncf\util.h">
+      <Filter>libs\ncf</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\ogg\ogg.h">
+      <Filter>libs\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\ogg\os_types.h">
+      <Filter>libs\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\crc32.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\deflate.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\inffast.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\inffixed.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\inflate.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\inftrees.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\trees.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\zconf.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\zlib.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\zlib\zutil.h">
+      <Filter>libs\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\basis.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\geom.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\matrix.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\quat.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\ray.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\sphvec.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\vector.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\vmath.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\vmath_config.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\vmath\vmath_types.h">
+      <Filter>libs\vmath</Filter>
+    </ClInclude>
+    <ClInclude Include="src\animation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\camera.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cfg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\datapath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dataset.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editdist.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event_handler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\image.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\light.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logger.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\material.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mesh.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nuc_emitter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nuc_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nuc_particle.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nuc_physics.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nuc_renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opengl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\point_sprite_ortho_renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\point_sprite_renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\screen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\screen_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdrman.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\texture.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unistate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xform_node.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy_template.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entity.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\collision_entity.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sphere.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game_screen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy_generator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wave.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render_target.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\projectile.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\audio.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\openal.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\ovstream.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\stream.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\sample.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\source.h">
+      <Filter>src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wave_group.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wave_group_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\holomap.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libdrawtext\drawtext.h">
+      <Filter>libs\libdrawtext</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\libdrawtext\drawtext_impl.h">
+      <Filter>libs\libdrawtext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bitmap_text.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\weapon_system.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\starting_screen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game_over_screen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\credits_screen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ovr_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libs\vmath\matrix.inl">
+      <Filter>libs\vmath</Filter>
+    </None>
+    <None Include="libs\vmath\quat.inl">
+      <Filter>libs\vmath</Filter>
+    </None>
+    <None Include="libs\vmath\ray.inl">
+      <Filter>libs\vmath</Filter>
+    </None>
+    <None Include="libs\vmath\vector.inl">
+      <Filter>libs\vmath</Filter>
+    </None>
+    <None Include="libs\vmath\vmath.inl">
+      <Filter>libs\vmath</Filter>
+    </None>
+    <None Include="src\dataset.inl">
+      <Filter>src</Filter>
+    </None>
+    <None Include="sdr\main_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\main_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\color_tex_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\color_tex_fxaa_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\color_tex_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\point_sprite_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\point_sprite_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\sky_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\sky_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="data\config\arcane_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\energy_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\fast_flame_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\fire_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\game_assets.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\nogravity_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\slow_z_thruster_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\stage1.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="sdr\fresnel_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\fresnel_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="data\config\enemy_drone.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\enemy_mothership.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="sdr\depth_pass_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\depth_pass_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\depth_dbg_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\depth_dbg_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\main_no_shad_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\main_no_shad_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\holomap_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\holomap_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\holomap_4dsnoise_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\holomap_4dsnoise_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\font_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\font_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\no_lighting_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\no_lighting_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\crosshair_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\crosshair_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="data\config\mediumfire_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\smallfire_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\y_pos_thrust_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="sdr\flashing_text_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\flashing_text_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\atmosphere_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\atmosphere_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="data\config\medium_explosion_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\huge_explosion_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\tiny_z_thruster_physics.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="data\config\tinyfire_emitter.config">
+      <Filter>config</Filter>
+    </None>
+    <None Include="sdr\dimmed_sky_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\dimmed_sky_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\drone_shield_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\drone_shield_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\point_sprite_heat_fs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+    <None Include="sdr\point_sprite_heat_vs.glsl">
+      <Filter>sdr</Filter>
+    </None>
+  </ItemGroup>
+</Project>

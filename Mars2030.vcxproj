@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2B59030B-5B0C-4EE6-BEAB-70490C71A1C3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Mars2030</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\usr\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\usr\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\usr\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\usr\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\usr\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\usr\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\usr\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\usr\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs;$(SolutionDir)libs\ncf;$(SolutionDir)libs\zlib;$(SolutionDir)libs\libjpeg;$(SolutionDir)libs\libpng;$(SolutionDir)libs\vmath;$(SolutionDir)libs\imago;$(SolutionDir)libs\libdrawtext;$(SolutionDir)src\audio;$(SolutionDir)src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;SDL2.lib;SDL2main.lib;LibOVR.lib;ws2_32.lib;freetype.lib;assimp.lib;OpenAL32.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs;$(SolutionDir)libs\ncf;$(SolutionDir)libs\zlib;$(SolutionDir)libs\libjpeg;$(SolutionDir)libs\libpng;$(SolutionDir)libs\vmath;$(SolutionDir)libs\imago;$(SolutionDir)libs\libdrawtext;$(SolutionDir)src\audio;$(SolutionDir)src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;SDL2.lib;SDL2main.lib;libovrd.lib;ws2_32.lib;freetype.lib;assimp.lib;OpenAL32.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs;$(SolutionDir)libs/zlib;$(SolutionDir)libs/vorbis;$(SolutionDir)libs/vmath;$(SolutionDir)libs/ogg;$(SolutionDir)libs/ncf;$(SolutionDir)libs/libpng;$(SolutionDir)libs/libjpeg;$(SolutionDir)libs/imago;$(SolutionDir)libs/libdrawtext;$(SolutionDir)src/audio;$(SolutionDir)src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;freetype.lib;SDL2.lib;SDL2main.lib;libOVR.lib;ws2_32.lib;assimp.lib;pthreadVC2.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs;$(SolutionDir)libs/zlib;$(SolutionDir)libs/vorbis;$(SolutionDir)libs/vmath;$(SolutionDir)libs/ogg;$(SolutionDir)libs/ncf;$(SolutionDir)libs/libpng;$(SolutionDir)libs/libjpeg;$(SolutionDir)libs/imago;$(SolutionDir)libs/libdrawtext;$(SolutionDir)src/audio;$(SolutionDir)src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;freetype.lib;SDL2.lib;SDL2main.lib;libovr.lib;ws2_32.lib;assimp.lib;pthreadVC2.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libs\imago\conv.c" />
+    <ClCompile Include="libs\imago\file_jpeg.c" />
+    <ClCompile Include="libs\imago\file_png.c" />
+    <ClCompile Include="libs\imago\file_ppm.c" />
+    <ClCompile Include="libs\imago\file_rgbe.c" />
+    <ClCompile Include="libs\imago\ftype_module.c" />
+    <ClCompile Include="libs\imago\imago2.c" />
+    <ClCompile Include="libs\imago\imago_gl.c" />
+    <ClCompile Include="libs\imago\modules.c" />
+    <ClCompile Include="libs\libdrawtext\drawgl.c" />
+    <ClCompile Include="libs\libdrawtext\font.c" />
+    <ClCompile Include="libs\libdrawtext\utf8.c" />
+    <ClCompile Include="libs\libjpeg\jcapimin.c" />
+    <ClCompile Include="libs\libjpeg\jcapistd.c" />
+    <ClCompile Include="libs\libjpeg\jccoefct.c" />
+    <ClCompile Include="libs\libjpeg\jccolor.c" />
+    <ClCompile Include="libs\libjpeg\jcdctmgr.c" />
+    <ClCompile Include="libs\libjpeg\jchuff.c" />
+    <ClCompile Include="libs\libjpeg\jcinit.c" />
+    <ClCompile Include="libs\libjpeg\jcmainct.c" />
+    <ClCompile Include="libs\libjpeg\jcmarker.c" />
+    <ClCompile Include="libs\libjpeg\jcmaster.c" />
+    <ClCompile Include="libs\libjpeg\jcomapi.c" />
+    <ClCompile Include="libs\libjpeg\jcparam.c" />
+    <ClCompile Include="libs\libjpeg\jcphuff.c" />
+    <ClCompile Include="libs\libjpeg\jcprepct.c" />
+    <ClCompile Include="libs\libjpeg\jcsample.c" />
+    <ClCompile Include="libs\libjpeg\jctrans.c" />
+    <ClCompile Include="libs\libjpeg\jdapimin.c" />
+    <ClCompile Include="libs\libjpeg\jdapistd.c" />
+    <ClCompile Include="libs\libjpeg\jdatadst.c" />
+    <ClCompile Include="libs\libjpeg\jdatasrc.c" />
+    <ClCompile Include="libs\libjpeg\jdcoefct.c" />
+    <ClCompile Include="libs\libjpeg\jdcolor.c" />
+    <ClCompile Include="libs\libjpeg\jddctmgr.c" />
+    <ClCompile Include="libs\libjpeg\jdhuff.c" />
+    <ClCompile Include="libs\libjpeg\jdinput.c" />
+    <ClCompile Include="libs\libjpeg\jdmainct.c" />
+    <ClCompile Include="libs\libjpeg\jdmarker.c" />
+    <ClCompile Include="libs\libjpeg\jdmaster.c" />
+    <ClCompile Include="libs\libjpeg\jdmerge.c" />
+    <ClCompile Include="libs\libjpeg\jdphuff.c" />
+    <ClCompile Include="libs\libjpeg\jdpostct.c" />
+    <ClCompile Include="libs\libjpeg\jdsample.c" />
+    <ClCompile Include="libs\libjpeg\jdtrans.c" />
+    <ClCompile Include="libs\libjpeg\jerror.c" />
+    <ClCompile Include="libs\libjpeg\jfdctflt.c" />
+    <ClCompile Include="libs\libjpeg\jfdctfst.c" />
+    <ClCompile Include="libs\libjpeg\jfdctint.c" />
+    <ClCompile Include="libs\libjpeg\jidctflt.c" />
+    <ClCompile Include="libs\libjpeg\jidctfst.c" />
+    <ClCompile Include="libs\libjpeg\jidctint.c" />
+    <ClCompile Include="libs\libjpeg\jidctred.c" />
+    <ClCompile Include="libs\libjpeg\jmemmgr.c" />
+    <ClCompile Include="libs\libjpeg\jmemnobs.c" />
+    <ClCompile Include="libs\libjpeg\jquant1.c" />
+    <ClCompile Include="libs\libjpeg\jquant2.c" />
+    <ClCompile Include="libs\libjpeg\jutils.c" />
+    <ClCompile Include="libs\libpng\png.c" />
+    <ClCompile Include="libs\libpng\pngerror.c" />
+    <ClCompile Include="libs\libpng\pnggccrd.c" />
+    <ClCompile Include="libs\libpng\pngget.c" />
+    <ClCompile Include="libs\libpng\pngmem.c" />
+    <ClCompile Include="libs\libpng\pngpread.c" />
+    <ClCompile Include="libs\libpng\pngread.c" />
+    <ClCompile Include="libs\libpng\pngrio.c" />
+    <ClCompile Include="libs\libpng\pngrtran.c" />
+    <ClCompile Include="libs\libpng\pngrutil.c" />
+    <ClCompile Include="libs\libpng\pngset.c" />
+    <ClCompile Include="libs\libpng\pngtrans.c" />
+    <ClCompile Include="libs\libpng\pngvcrd.c" />
+    <ClCompile Include="libs\libpng\pngwio.c" />
+    <ClCompile Include="libs\libpng\pngwrite.c" />
+    <ClCompile Include="libs\libpng\pngwtran.c" />
+    <ClCompile Include="libs\libpng\pngwutil.c" />
+    <ClCompile Include="libs\ncf\dllmain.c" />
+    <ClCompile Include="libs\ncf\ncf.cc" />
+    <ClCompile Include="libs\ncf\util.cc" />
+    <ClCompile Include="libs\ogg\bitwise.c" />
+    <ClCompile Include="libs\ogg\framing.c" />
+    <ClCompile Include="libs\vmath\basis.cc" />
+    <ClCompile Include="libs\vmath\basis_c.c" />
+    <ClCompile Include="libs\vmath\geom.c" />
+    <ClCompile Include="libs\vmath\matrix.cc" />
+    <ClCompile Include="libs\vmath\matrix_c.c" />
+    <ClCompile Include="libs\vmath\quat.cc" />
+    <ClCompile Include="libs\vmath\quat_c.c" />
+    <ClCompile Include="libs\vmath\ray.cc" />
+    <ClCompile Include="libs\vmath\ray_c.c" />
+    <ClCompile Include="libs\vmath\sphvec.cc" />
+    <ClCompile Include="libs\vmath\vector.cc" />
+    <ClCompile Include="libs\vmath\vmath.c" />
+    <ClCompile Include="libs\vorbis\analysis.c" />
+    <ClCompile Include="libs\vorbis\bitrate.c" />
+    <ClCompile Include="libs\vorbis\block.c" />
+    <ClCompile Include="libs\vorbis\codebook.c" />
+    <ClCompile Include="libs\vorbis\envelope.c" />
+    <ClCompile Include="libs\vorbis\floor0.c" />
+    <ClCompile Include="libs\vorbis\floor1.c" />
+    <ClCompile Include="libs\vorbis\info.c" />
+    <ClCompile Include="libs\vorbis\lookup.c" />
+    <ClCompile Include="libs\vorbis\lpc.c" />
+    <ClCompile Include="libs\vorbis\lsp.c" />
+    <ClCompile Include="libs\vorbis\mapping0.c" />
+    <ClCompile Include="libs\vorbis\mdct.c" />
+    <ClCompile Include="libs\vorbis\psy.c" />
+    <ClCompile Include="libs\vorbis\registry.c" />
+    <ClCompile Include="libs\vorbis\res0.c" />
+    <ClCompile Include="libs\vorbis\sharedbook.c" />
+    <ClCompile Include="libs\vorbis\smallft.c" />
+    <ClCompile Include="libs\vorbis\synthesis.c" />
+    <ClCompile Include="libs\vorbis\vorbisenc.c" />
+    <ClCompile Include="libs\vorbis\vorbisfile.c" />
+    <ClCompile Include="libs\vorbis\window.c" />
+    <ClCompile Include="libs\zlib\adler32.c" />
+    <ClCompile Include="libs\zlib\compress.c" />
+    <ClCompile Include="libs\zlib\crc32.c" />
+    <ClCompile Include="libs\zlib\deflate.c" />
+    <ClCompile Include="libs\zlib\gzio.c" />
+    <ClCompile Include="libs\zlib\infback.c" />
+    <ClCompile Include="libs\zlib\inffast.c" />
+    <ClCompile Include="libs\zlib\inflate.c" />
+    <ClCompile Include="libs\zlib\inftrees.c" />
+    <ClCompile Include="libs\zlib\trees.c" />
+    <ClCompile Include="libs\zlib\uncompr.c" />
+    <ClCompile Include="libs\zlib\zutil.c" />
+    <ClCompile Include="src\animation.cpp" />
+    <ClCompile Include="src\audio\audio.cc" />
+    <ClCompile Include="src\audio\ovstream.cc" />
+    <ClCompile Include="src\audio\sample.cc" />
+    <ClCompile Include="src\audio\source.cc" />
+    <ClCompile Include="src\audio\stream.cc" />
+    <ClCompile Include="src\audio_manager.cpp" />
+    <ClCompile Include="src\bitmap_text.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\cfg.cpp" />
+    <ClCompile Include="src\collision_entity.cpp" />
+    <ClCompile Include="src\credits_screen.cpp" />
+    <ClCompile Include="src\datapath.cpp" />
+    <ClCompile Include="src\enemy.cpp" />
+    <ClCompile Include="src\enemy_generator.cpp" />
+    <ClCompile Include="src\enemy_template.cpp" />
+    <ClCompile Include="src\entity.cpp" />
+    <ClCompile Include="src\event_handler.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\game_over_screen.cpp" />
+    <ClCompile Include="src\game_screen.cpp" />
+    <ClCompile Include="src\holomap.cpp" />
+    <ClCompile Include="src\image.cpp" />
+    <ClCompile Include="src\light.cpp" />
+    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\material.cpp" />
+    <ClCompile Include="src\mesh.cpp" />
+    <ClCompile Include="src\nuc_emitter.cpp" />
+    <ClCompile Include="src\nuc_manager.cpp" />
+    <ClCompile Include="src\nuc_particle.cpp" />
+    <ClCompile Include="src\nuc_physics.cpp" />
+    <ClCompile Include="src\nuc_renderer.cpp" />
+    <ClCompile Include="src\object.cpp" />
+    <ClCompile Include="src\opengl.cpp" />
+    <ClCompile Include="src\ovr_manager.cpp" />
+    <ClCompile Include="src\point_spirte_ortho_renderer.cpp" />
+    <ClCompile Include="src\point_sprite_renderer.cpp" />
+    <ClCompile Include="src\projectile.cpp" />
+    <ClCompile Include="src\render_target.cpp" />
+    <ClCompile Include="src\scene.cpp" />
+    <ClCompile Include="src\screen.cpp" />
+    <ClCompile Include="src\screen_manager.cpp" />
+    <ClCompile Include="src\sdrman.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\sphere.cpp" />
+    <ClCompile Include="src\stage.cpp" />
+    <ClCompile Include="src\starting_screen.cpp" />
+    <ClCompile Include="src\texture.cpp" />
+    <ClCompile Include="src\timer.cpp" />
+    <ClCompile Include="src\unistate.cpp" />
+    <ClCompile Include="src\wave.cpp" />
+    <ClCompile Include="src\wave_group.cpp" />
+    <ClCompile Include="src\wave_group_manager.cpp" />
+    <ClCompile Include="src\weapon_system.cpp" />
+    <ClCompile Include="src\xform_node.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libs\imago\ftype_module.h" />
+    <ClInclude Include="libs\imago\imago2.h" />
+    <ClInclude Include="libs\libdrawtext\drawtext.h" />
+    <ClInclude Include="libs\libdrawtext\drawtext_impl.h" />
+    <ClInclude Include="libs\libjpeg\cderror.h" />
+    <ClInclude Include="libs\libjpeg\jchuff.h" />
+    <ClInclude Include="libs\libjpeg\jconfig.h" />
+    <ClInclude Include="libs\libjpeg\jdct.h" />
+    <ClInclude Include="libs\libjpeg\jdhuff.h" />
+    <ClInclude Include="libs\libjpeg\jerror.h" />
+    <ClInclude Include="libs\libjpeg\jinclude.h" />
+    <ClInclude Include="libs\libjpeg\jmemsys.h" />
+    <ClInclude Include="libs\libjpeg\jmorecfg.h" />
+    <ClInclude Include="libs\libjpeg\jpegint.h" />
+    <ClInclude Include="libs\libjpeg\jpeglib.h" />
+    <ClInclude Include="libs\libjpeg\jversion.h" />
+    <ClInclude Include="libs\libpng\png.h" />
+    <ClInclude Include="libs\libpng\pngconf.h" />
+    <ClInclude Include="libs\ncf\declspec.h" />
+    <ClInclude Include="libs\ncf\ncf.h" />
+    <ClInclude Include="libs\ncf\util.h" />
+    <ClInclude Include="libs\ogg\ogg.h" />
+    <ClInclude Include="libs\ogg\os_types.h" />
+    <ClInclude Include="libs\vmath\basis.h" />
+    <ClInclude Include="libs\vmath\geom.h" />
+    <ClInclude Include="libs\vmath\matrix.h" />
+    <ClInclude Include="libs\vmath\quat.h" />
+    <ClInclude Include="libs\vmath\ray.h" />
+    <ClInclude Include="libs\vmath\sphvec.h" />
+    <ClInclude Include="libs\vmath\vector.h" />
+    <ClInclude Include="libs\vmath\vmath.h" />
+    <ClInclude Include="libs\vmath\vmath_config.h" />
+    <ClInclude Include="libs\vmath\vmath_types.h" />
+    <ClInclude Include="libs\vorbis\backends.h" />
+    <ClInclude Include="libs\vorbis\bitrate.h" />
+    <ClInclude Include="libs\vorbis\codebook.h" />
+    <ClInclude Include="libs\vorbis\codec.h" />
+    <ClInclude Include="libs\vorbis\codec_internal.h" />
+    <ClInclude Include="libs\vorbis\envelope.h" />
+    <ClInclude Include="libs\vorbis\highlevel.h" />
+    <ClInclude Include="libs\vorbis\lookup.h" />
+    <ClInclude Include="libs\vorbis\lookup_data.h" />
+    <ClInclude Include="libs\vorbis\lpc.h" />
+    <ClInclude Include="libs\vorbis\lsp.h" />
+    <ClInclude Include="libs\vorbis\masking.h" />
+    <ClInclude Include="libs\vorbis\mdct.h" />
+    <ClInclude Include="libs\vorbis\misc.h" />
+    <ClInclude Include="libs\vorbis\os.h" />
+    <ClInclude Include="libs\vorbis\psy.h" />
+    <ClInclude Include="libs\vorbis\registry.h" />
+    <ClInclude Include="libs\vorbis\scales.h" />
+    <ClInclude Include="libs\vorbis\smallft.h" />
+    <ClInclude Include="libs\vorbis\vorbisenc.h" />
+    <ClInclude Include="libs\vorbis\vorbisfile.h" />
+    <ClInclude Include="libs\vorbis\window.h" />
+    <ClInclude Include="libs\zlib\crc32.h" />
+    <ClInclude Include="libs\zlib\deflate.h" />
+    <ClInclude Include="libs\zlib\inffast.h" />
+    <ClInclude Include="libs\zlib\inffixed.h" />
+    <ClInclude Include="libs\zlib\inflate.h" />
+    <ClInclude Include="libs\zlib\inftrees.h" />
+    <ClInclude Include="libs\zlib\trees.h" />
+    <ClInclude Include="libs\zlib\zconf.h" />
+    <ClInclude Include="libs\zlib\zlib.h" />
+    <ClInclude Include="libs\zlib\zutil.h" />
+    <ClInclude Include="src\animation.h" />
+    <ClInclude Include="src\audio\audio.h" />
+    <ClInclude Include="src\audio\openal.h" />
+    <ClInclude Include="src\audio\ovstream.h" />
+    <ClInclude Include="src\audio\sample.h" />
+    <ClInclude Include="src\audio\source.h" />
+    <ClInclude Include="src\audio\stream.h" />
+    <ClInclude Include="src\audio_manager.h" />
+    <ClInclude Include="src\bitmap_text.h" />
+    <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\cfg.h" />
+    <ClInclude Include="src\collision_entity.h" />
+    <ClInclude Include="src\credits_screen.h" />
+    <ClInclude Include="src\datapath.h" />
+    <ClInclude Include="src\dataset.h" />
+    <ClInclude Include="src\editdist.h" />
+    <ClInclude Include="src\enemy.h" />
+    <ClInclude Include="src\enemy_generator.h" />
+    <ClInclude Include="src\enemy_template.h" />
+    <ClInclude Include="src\entity.h" />
+    <ClInclude Include="src\event_handler.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\game_over_screen.h" />
+    <ClInclude Include="src\game_screen.h" />
+    <ClInclude Include="src\holomap.h" />
+    <ClInclude Include="src\image.h" />
+    <ClInclude Include="src\light.h" />
+    <ClInclude Include="src\logger.h" />
+    <ClInclude Include="src\material.h" />
+    <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\nuc_emitter.h" />
+    <ClInclude Include="src\nuc_manager.h" />
+    <ClInclude Include="src\nuc_particle.h" />
+    <ClInclude Include="src\nuc_physics.h" />
+    <ClInclude Include="src\nuc_renderer.h" />
+    <ClInclude Include="src\object.h" />
+    <ClInclude Include="src\opengl.h" />
+    <ClInclude Include="src\ovr_manager.h" />
+    <ClInclude Include="src\point_sprite_ortho_renderer.h" />
+    <ClInclude Include="src\point_sprite_renderer.h" />
+    <ClInclude Include="src\projectile.h" />
+    <ClInclude Include="src\render_target.h" />
+    <ClInclude Include="src\scene.h" />
+    <ClInclude Include="src\screen.h" />
+    <ClInclude Include="src\screen_manager.h" />
+    <ClInclude Include="src\sdrman.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\sphere.h" />
+    <ClInclude Include="src\stage.h" />
+    <ClInclude Include="src\starting_screen.h" />
+    <ClInclude Include="src\texture.h" />
+    <ClInclude Include="src\timer.h" />
+    <ClInclude Include="src\unistate.h" />
+    <ClInclude Include="src\wave.h" />
+    <ClInclude Include="src\wave_group.h" />
+    <ClInclude Include="src\wave_group_manager.h" />
+    <ClInclude Include="src\weapon_system.h" />
+    <ClInclude Include="src\xform_node.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\config\arcane_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\enemy_drone.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\enemy_mothership.config" />
+    <None Include="data\config\energy_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\fast_flame_physics.config" />
+    <None Include="data\config\fire_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\game_assets.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\huge_explosion_physics.config" />
+    <None Include="data\config\mediumfire_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\medium_explosion_physics.config" />
+    <None Include="data\config\nogravity_physics.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\slow_z_thruster_physics.config" />
+    <None Include="data\config\smallfire_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\stage1.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\tinyfire_emitter.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\config\tiny_z_thruster_physics.config" />
+    <None Include="data\config\y_pos_thrust_physics.config" />
+    <None Include="libs\vmath\matrix.inl" />
+    <None Include="libs\vmath\quat.inl" />
+    <None Include="libs\vmath\ray.inl" />
+    <None Include="libs\vmath\vector.inl" />
+    <None Include="libs\vmath\vmath.inl" />
+    <None Include="sdr\atmosphere_fs.glsl" />
+    <None Include="sdr\atmosphere_vs.glsl" />
+    <None Include="sdr\color_tex_fs.glsl" />
+    <None Include="sdr\color_tex_fxaa_fs.glsl" />
+    <None Include="sdr\color_tex_vs.glsl" />
+    <None Include="sdr\crosshair_fs.glsl" />
+    <None Include="sdr\crosshair_vs.glsl" />
+    <None Include="sdr\depth_dbg_fs.glsl" />
+    <None Include="sdr\depth_dbg_vs.glsl" />
+    <None Include="sdr\depth_pass_fs.glsl" />
+    <None Include="sdr\depth_pass_vs.glsl" />
+    <None Include="sdr\dimmed_sky_fs.glsl" />
+    <None Include="sdr\dimmed_sky_vs.glsl" />
+    <None Include="sdr\drone_shield_fs.glsl" />
+    <None Include="sdr\drone_shield_vs.glsl" />
+    <None Include="sdr\flashing_text_fs.glsl" />
+    <None Include="sdr\flashing_text_vs.glsl" />
+    <None Include="sdr\font_fs.glsl" />
+    <None Include="sdr\font_vs.glsl" />
+    <None Include="sdr\fresnel_fs.glsl" />
+    <None Include="sdr\fresnel_vs.glsl" />
+    <None Include="sdr\holomap_4dsnoise_fs.glsl" />
+    <None Include="sdr\holomap_4dsnoise_vs.glsl" />
+    <None Include="sdr\holomap_fs.glsl" />
+    <None Include="sdr\holomap_vs.glsl" />
+    <None Include="sdr\main_fs.glsl" />
+    <None Include="sdr\main_no_shad_fs.glsl" />
+    <None Include="sdr\main_no_shad_vs.glsl" />
+    <None Include="sdr\main_vs.glsl" />
+    <None Include="sdr\no_lighting_fs.glsl" />
+    <None Include="sdr\no_lighting_vs.glsl" />
+    <None Include="sdr\point_sprite_fs.glsl" />
+    <None Include="sdr\point_sprite_heat_fs.glsl" />
+    <None Include="sdr\point_sprite_heat_vs.glsl" />
+    <None Include="sdr\point_sprite_vs.glsl" />
+    <None Include="sdr\sky_fs.glsl" />
+    <None Include="sdr\sky_vs.glsl" />
+    <None Include="src\dataset.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
