@@ -156,10 +156,10 @@ Scene::~Scene()
 bool Scene::load(const char *fname)
 {
 	const aiScene *scene; //used to get data from the loaded scene from the file.
-    Mesh *mesh = NULL;
-    Object *obj = NULL;//used as a temporary object. Used with add_object(Object *obj).
-    Light *lt = NULL; //used as a temporary object. Used with add_light(Light *lt).
-    Camera *c = NULL;
+    Mesh *mesh = nullptr;
+    Object *obj = nullptr;//used as a temporary object. Used with add_object(Object *obj).
+    Light *lt = nullptr; //used as a temporary object. Used with add_light(Light *lt).
+    Camera *c = nullptr;
 
     scene = aiImportFile(fname, aiProcess_GenSmoothNormals | aiProcess_Triangulate
                | aiProcess_CalcTangentSpace | aiProcess_FlipUVs | aiProcess_JoinIdenticalVertices);

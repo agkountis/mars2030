@@ -30,16 +30,15 @@ bool OvrManager::init_ovr_data(int win_width, int win_height)
 	std::cout << "Initialized HMD: " << ovr_data.hmd_desc.Manufacturer << " - " << ovr_data.hmd_desc.ProductName << std::endl;
 
 	/*The new SDK has all the tracking capabilities enabled by default.*/
-
 	ovr_data.eye_rdesc[0] = ovr_GetRenderDesc(ovr_data.session, ovrEye_Left, ovr_data.hmd_desc.DefaultEyeFov[0]);
 	ovr_data.eye_rdesc[1] = ovr_GetRenderDesc(ovr_data.session, ovrEye_Right, ovr_data.hmd_desc.DefaultEyeFov[1]);
 
-	ovr_data.hmd_to_eye_view_offset[0] = ovr_data.eye_rdesc[0].HmdToEyeViewOffset;
-	ovr_data.hmd_to_eye_view_offset[1] = ovr_data.eye_rdesc[1].HmdToEyeViewOffset;
+	ovr_data.hmd_to_eye_view_offset[0] = ovr_data.eye_rdesc[0].HmdToEyeOffset;
+	ovr_data.hmd_to_eye_view_offset[1] = ovr_data.eye_rdesc[1].HmdToEyeOffset;
 
 	ovr_data.view_scale_desc.HmdSpaceToWorldScaleInMeters = 1.0;
-	ovr_data.view_scale_desc.HmdToEyeViewOffset[0] = ovr_data.hmd_to_eye_view_offset[0];
-	ovr_data.view_scale_desc.HmdToEyeViewOffset[1] = ovr_data.hmd_to_eye_view_offset[1];
+	ovr_data.view_scale_desc.HmdToEyeOffset[0] = ovr_data.hmd_to_eye_view_offset[0];
+	ovr_data.view_scale_desc.HmdToEyeOffset[1] = ovr_data.hmd_to_eye_view_offset[1];
 
 	ovr_data.layer.Header.Type = ovrLayerType_EyeFov;
 	ovr_data.layer.Header.Flags = ovrLayerFlag_TextureOriginAtBottomLeft;
@@ -56,9 +55,21 @@ bool OvrManager::init_ovr_data(int win_width, int win_height)
 
 	ovr_rtarg.set_fb_height(std::max(ovr_data.eyeres[0].h, ovr_data.eyeres[1].h));
 
-	ovrResult res = ovr_CreateSwapTextureSetGL(ovr_data.session, GL_SRGB8_ALPHA8, ovr_rtarg.get_fb_width(), ovr_rtarg.get_fb_height(), &ovr_data.swap_tex_set);
+	ovr_data.tex_swap_chain = nullptr;
+
+	ovr_data.tex_swap_chain_desc = {};
+	ovr_data.tex_swap_chain_desc.Type = ovrTexture_2D;
+	ovr_data.tex_swap_chain_desc.ArraySize = 1;
+	ovr_data.tex_swap_chain_desc.Format = OVR_FORMAT_R8G8B8A8_UNORM_SRGB;
+	ovr_data.tex_swap_chain_desc.Width = ovr_rtarg.get_fb_width();
+	ovr_data.tex_swap_chain_desc.Height = ovr_rtarg.get_fb_height();
+	ovr_data.tex_swap_chain_desc.MipLevels = 1;
+	ovr_data.tex_swap_chain_desc.SampleCount = 1;
+	ovr_data.tex_swap_chain_desc.StaticImage = ovrFalse;
+
+	ovrResult res = ovr_CreateTextureSwapChainGL(ovr_data.session, &ovr_data.tex_swap_chain_desc, &ovr_data.tex_swap_chain);
 	if (OVR_FAILURE(res)) {
-		std::cout << "Failed to allocate the ovrTextureSet!" << std::endl;
+		std::cout << "Failed to allocate the ovrTextureSwapChain!" << std::endl;
 		return false;
 	}
 
@@ -66,17 +77,28 @@ bool OvrManager::init_ovr_data(int win_width, int win_height)
 	ovr_rtarg.set_shad_tex_height(2048);
 
 	/*Assign a texture from the texture set so that the render target won't allocate a new one by itself during creation*/
-	ovr_rtarg.set_color_attachment(((ovrGLTexture*)&ovr_data.swap_tex_set->Textures[0])->OGL.TexId);
+	unsigned int tex_id;
+	tex_id = ovr_GetTextureSwapChainBufferGL(ovr_data.session, ovr_data.tex_swap_chain, 0, &tex_id);
+	ovr_rtarg.set_color_attachment(tex_id);
 	ovr_rtarg.create(RT_ALL);
 
-	res = ovr_CreateMirrorTextureGL(ovr_data.session, GL_SRGB8_ALPHA8, win_width, win_height, reinterpret_cast<ovrTexture**>(&ovr_data.mirror_tex));
+	//TODO: Initialize the mirror tex desc structure.
+	ovr_data.mirror_tex = nullptr;
+
+	ovr_data.mirror_tex_desc = {};
+	ovr_data.mirror_tex_desc.Format = OVR_FORMAT_R8G8B8A8_UNORM_SRGB;
+	ovr_data.mirror_tex_desc.Width = ovr_rtarg.get_fb_width();
+	ovr_data.mirror_tex_desc.Height = ovr_rtarg.get_fb_height();
+
+	//, GL_SRGB8_ALPHA8, win_width, win_height, reinterpret_cast<ovrTexture**>(&ovr_data.mirror_tex));
+	res = ovr_CreateMirrorTextureGL(ovr_data.session, &ovr_data.mirror_tex_desc, &ovr_data.mirror_tex);
 	if (OVR_FAILURE(res)) {
 		std::cerr << "Failed to allocate the ovr Mirror Texture!" << std::endl;
 		return false;
 	}
 
-	ovr_data.layer.ColorTexture[0] = ovr_data.swap_tex_set;
-	ovr_data.layer.ColorTexture[1] = ovr_data.swap_tex_set;
+	ovr_data.layer.ColorTexture[0] = ovr_data.tex_swap_chain;
+	ovr_data.layer.ColorTexture[1] = ovr_data.tex_swap_chain;
 
 	ovrRecti rect0 = {
 			{ 0, 0 },
@@ -95,8 +117,8 @@ bool OvrManager::init_ovr_data(int win_width, int win_height)
 
 void OvrManager::destroy_ovr_data()
 {
-	ovr_DestroySwapTextureSet(ovr_data.session, ovr_data.swap_tex_set);
-	ovr_DestroyMirrorTexture(ovr_data.session, reinterpret_cast<ovrTexture*>(ovr_data.mirror_tex));
+	ovr_DestroyTextureSwapChain(ovr_data.session, ovr_data.tex_swap_chain);
+	ovr_DestroyMirrorTexture(ovr_data.session, ovr_data.mirror_tex);
 	ovr_Destroy(ovr_data.session);
 }
 
@@ -123,7 +145,7 @@ const OvrTransformationData& OvrManager::get_ovr_transformation_data_per_eye(uns
 	/*Calculate the Projection Matrix*/
 	ovr_transformation_data.projection.reset_identity();
 
-	ovrMatrix4f proj = ovrMatrix4f_Projection(ovr_data.layer.Fov[eye], 0.01, 40000.0, ovrProjection_RightHanded);
+	ovrMatrix4f proj = ovrMatrix4f_Projection(ovr_data.layer.Fov[eye], 0.01, 40000.0, ovrProjection_None);
 	memcpy(ovr_transformation_data.projection[0], proj.M, 16 * sizeof(float));
 	/*-------------------------------------------------------------------------*/
 
@@ -142,14 +164,12 @@ const OvrTransformationData& OvrManager::get_ovr_transformation_data_per_eye(uns
 
 void OvrManager::begin_ovr_frame()
 {
-	ovrGLTexture *tex;
+	int current_idx = 0;
+	ovr_GetTextureSwapChainCurrentIndex(ovr_data.session, ovr_data.tex_swap_chain, &current_idx);
 
-	/*Increment the texture set index so that we use the next texture before writing*/
-	ovr_data.swap_tex_set->CurrentIndex = (ovr_data.swap_tex_set->CurrentIndex + 1)
-		% ovr_data.swap_tex_set->TextureCount;
-
-	tex = (ovrGLTexture*)&ovr_data.swap_tex_set->Textures[ovr_data.swap_tex_set->CurrentIndex];
-	ovr_rtarg.set_and_assign_color_attachment(tex->OGL.TexId);
+	unsigned int tex_id = 0;
+	tex_id = ovr_GetTextureSwapChainBufferGL(ovr_data.session, ovr_data.tex_swap_chain, current_idx, &tex_id);
+	ovr_rtarg.set_and_assign_color_attachment(tex_id);
 
 	/*Start drawing onto our texture render target.*/
 	ovr_rtarg.bind(RT_COLOR_AND_DEPTH);
@@ -176,7 +196,8 @@ void OvrManager::draw_ovr_mirror_texture(int win_width, int win_height)
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	glClearColor(1.0, 0.0, 0.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	unsigned int t = ovr_data.mirror_tex->OGL.TexId;
+	unsigned int t = 0;
+	ovr_GetMirrorTextureBufferGL(ovr_data.session, ovr_data.mirror_tex, &t);
 	glUseProgram(0);
 	glPushAttrib(GL_ENABLE_BIT);
 	glDisable(GL_DEPTH_TEST);

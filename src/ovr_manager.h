@@ -18,8 +18,12 @@ struct OvrData {
 	ovrEyeRenderDesc eye_rdesc[2];
 	ovrVector3f hmd_to_eye_view_offset[2];
 	ovrLayerEyeFov layer;
-	ovrSwapTextureSet *swap_tex_set;
-	ovrGLTexture *mirror_tex;
+	ovrTextureSwapChain tex_swap_chain;
+	ovrTextureSwapChainDesc tex_swap_chain_desc;
+	//ovrSwapTextureSet *swap_tex_set;
+	ovrMirrorTexture mirror_tex;
+	ovrMirrorTextureDesc mirror_tex_desc;
+	//ovrGLTexture *mirror_tex;
 	ovrViewScaleDesc view_scale_desc;
 };
 
