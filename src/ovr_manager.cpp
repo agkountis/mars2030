@@ -168,7 +168,7 @@ void OvrManager::begin_ovr_frame()
 	ovr_GetTextureSwapChainCurrentIndex(ovr_data.session, ovr_data.tex_swap_chain, &current_idx);
 
 	unsigned int tex_id = 0;
-	tex_id = ovr_GetTextureSwapChainBufferGL(ovr_data.session, ovr_data.tex_swap_chain, current_idx, &tex_id);
+	ovr_GetTextureSwapChainBufferGL(ovr_data.session, ovr_data.tex_swap_chain, current_idx, &tex_id);
 	ovr_rtarg.set_and_assign_color_attachment(tex_id);
 
 	/*Start drawing onto our texture render target.*/
@@ -181,6 +181,8 @@ void OvrManager::begin_ovr_frame()
 bool OvrManager::submit_ovr_frame()
 {
 	ovr_rtarg.unbind();
+
+	ovr_CommitTextureSwapChain(ovr_data.session, ovr_data.tex_swap_chain);
 
 	ovr_data.layer.RenderPose[0] = eye_poses.pose[0];
 	ovr_data.layer.RenderPose[1] = eye_poses.pose[1];

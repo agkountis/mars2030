@@ -80,6 +80,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>C:\usr\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\usr\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>C:\usr\bin;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
